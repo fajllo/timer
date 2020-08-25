@@ -15,12 +15,12 @@ class Timer {
     }
     start = () =>{
         this.tick();
-        this.timer = setInterval(this.tick,1000);
+        this.counter = setInterval(this.tick,1000);
         
 
     }
     stop = () => {
-        clearInterval(this.timer);
+        clearInterval(this.counter);
     }
     tick = () => {
         console.log("tick tack")
