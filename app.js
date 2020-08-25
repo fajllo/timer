@@ -23,7 +23,10 @@ class Timer {
         clearInterval(this.counter);
     }
     tick = () => {
-        console.log("tick tack")
+        const timeRemaining = parseFloat(this.durationInput.value);
+        this.durationInput.value = timeRemaining -1;
+
+        console.log(timeRemaining);
 
     }
 
