@@ -4,7 +4,7 @@
 //durationChange
 //tick()
 class Timer {
-    constructor(durationInput,startBtn,stopBtn){
+    constructor(durationInput = 0,startBtn,stopBtn){
         this.durationInput = durationInput;
         this.startBtn = startBtn;
         this.stopBtn = stopBtn;
@@ -13,10 +13,11 @@ class Timer {
         this.stopBtn.addEventListener("click",this.stop)
         
     }
-    start(){
-        const {durationInput} = this;
+    start = () =>{
+      
         console.log("count down has began")
-        console.log(durationInput)
+        console.log(this.durationInput.value)
+
     }
     stop(){
         console.log("stop")
@@ -27,4 +28,4 @@ const startBtn = document.querySelector("#start")
 const stopBtn = document.querySelector("#stop")
 const duration = document.querySelector("#duration")
 
-const timer = new Timer(duration.value,startBtn,stopBtn);
+const timer = new Timer(duration,startBtn,stopBtn);
