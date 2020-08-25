@@ -23,12 +23,16 @@ class Timer {
         clearInterval(this.counter);
     }
     tick = () => {
-        const timeRemaining = this.timeLeft;
-        this.durationInput.value = timeRemaining -1;
+        this.timeLeft = timeRemaining -1;
     }
 
     get timeLeft() {
         return parseFloat(this.durationInput.value)
+    }
+
+    set timeLeft(time){
+        this.durationInput.value =time
+
     }
 }
 const startBtn = document.querySelector("#start")
