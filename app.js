@@ -14,13 +14,17 @@ class Timer {
         
     }
     start = () =>{
-      
-        console.log("count down has began")
-        console.log(this.durationInput.value)
+        this.tick();
+        this.timer = setInterval(this.tick,1000);
+        
 
     }
-    stop(){
-        console.log("stop")
+    stop = () => {
+        clearInterval(this.timer);
+    }
+    tick = () => {
+        console.log("tick tack")
+
     }
 
 }
