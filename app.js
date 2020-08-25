@@ -23,13 +23,13 @@ class Timer {
         clearInterval(this.counter);
     }
     tick = () => {
-        const timeRemaining = parseFloat(this.durationInput.value);
+        const timeRemaining = this.timeLeft;
         this.durationInput.value = timeRemaining -1;
-
-        console.log(timeRemaining);
-
     }
 
+    get timeLeft() {
+        return parseFloat(this.durationInput.value)
+    }
 }
 const startBtn = document.querySelector("#start")
 const stopBtn = document.querySelector("#stop")
