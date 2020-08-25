@@ -23,7 +23,13 @@ class Timer {
         clearInterval(this.counter);
     }
     tick = () => {
-        this.timeLeft = timeRemaining -1;
+        if (this.timeLeft <= 0 ){
+            this.stop();
+        }
+        else{
+            this.timeLeft = this.timeLeft -1;
+        }
+
     }
 
     get timeLeft() {
