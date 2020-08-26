@@ -12,14 +12,14 @@ const circle = document.querySelector("circle")
 const circleLen = circle.getAttribute("r") * 2 *Math.PI;
 circle.setAttribute('stroke-dasharray',circleLen)
 let currentOffsset = 0;
-
+let offset;
 const timer = new Timer(duration,startBtn,stopBtn, {
-    onStart(){
-        console.log("start")
+    onStart(totalDuration){
+        offset = totalDuration
     },
-    onTick(){
-        circle.setAttribute('stroke-dashoffset',currentOffsset)
-        currentOffsset = currentOffsset - 1;
+    onTick(timeLeft){
+        circle.setAttribute('stroke-dashoffset', circleLen*timeLeft/offset - circleLen)
+
     },
     onComplete(){
         console.log("complete")

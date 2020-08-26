@@ -15,10 +15,10 @@ class Timer {
     }
     start = () =>{
         if (this.onStart){
-            this.onStart();
+            this.onStart(this.timeLeft);
         }
         this.tick();
-        this.counter = setInterval(this.tick,50);
+        this.counter = setInterval(this.tick,10);
         
 
     }
@@ -30,7 +30,6 @@ class Timer {
 
     }
     tick = () => {
-        console.log(this.durationInput.value)
         if (this.timeLeft <= 0 ){
             this.stop();
             if (this.onComplete){
@@ -38,9 +37,9 @@ class Timer {
             }
         }
         else{
-            this.timeLeft = this.timeLeft -0.05;
+            this.timeLeft = this.timeLeft -0.01;
             if (this.onTick){
-                this.onTick();
+                this.onTick(this.timeLeft);
             }
         }
 
@@ -51,7 +50,7 @@ class Timer {
     }
 
     set timeLeft(time){
-        this.durationInput.value = time
+        this.durationInput.value = time.toFixed(2);
 
     }
 
