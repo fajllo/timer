@@ -8,12 +8,21 @@
     <title>inTervalTimer</title>
 </head>
 <body>
-    <svg height = "500" width = "500">
-        <circle r = "200" cx = "250" cy = "250" fill = "transparent" stroke = "green" stroke-width = "10" transform = "rotate(-90 250 250)" >
-    </svg>
-    <input type="text" id = "duration" value="30">
-    <button id="start">start</button>
-    <button id="stop">stop</button>
+    <div id="container">
+        <svg height = "500" width = "500">
+            <circle r = "200" cx = "250" cy = "250" fill = "transparent" stroke = "green" stroke-width = "10" transform = "rotate(-90 250 250)" >
+        </svg>
+  
+        <div id = "inputs">
+            <input type="text" id = "duration" value="30">
+        </div>  
+        <div id="btns"> 
+            <button id="start"><i class="fas fa-play"></i></button>
+            <button id="stop"><i class="fas fa-pause"></i></button>
+        </div>
+
+    </div>
+
     <script src="timer.js"></script>
     <script src="app.js"></script>
 </body>

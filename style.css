@@ -1,0 +1,35 @@
+body{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+#btns{
+    position: relative;
+    top: -250px;
+    left: auto;
+}
+#inputs{
+    position: relative;
+    top: -300px;
+    left: auto;
+}
+input{
+    text-align: center;
+    border:none;
+    outline: none;
+    font-size:90px;
+    background-color: transparent;
+}

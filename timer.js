@@ -24,9 +24,7 @@ class Timer {
     }
     stop = () => {
         clearInterval(this.counter);
-        const h1 = document.createElement("h1");
-        h1.innerText = "koniec";
-        document.body.appendChild(h1);
+
 
     }
     tick = () => {
