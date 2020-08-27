@@ -38,3 +38,6 @@ button{
     border:none;
     size:20px;
 }
+#start, #stop{
+    outline:none;
+}
